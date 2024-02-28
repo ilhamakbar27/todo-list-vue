@@ -2,31 +2,31 @@ import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-    todos: [],
+    notes: [],
   },
   mutations: {
-    setTodos(state, todos) {
-      state.todos = todos;
+    setNotes(state, notes) {
+      state.notes = notes;
     },
-    addTodo(state, todo) {
-      state.todos.push(todo);
+    addNote(state, note) {
+      state.notes.push(note);
     },
-    removeTodo(state, index) {
-      state.todos.splice(index, 1);
+    removeNote(state, index) {
+      state.notes.splice(index, 1);
     },
   },
   actions: {
-    setTodos({ commit }, todos) {
-      commit('setTodos', todos);
+    setNotes({ commit }, notes) {
+      commit('setNotes', notes);
     },
-    addTodo({ commit }, todo) {
-      commit('addTodo', todo);
+    addNote({ commit }, note) {
+      commit('addNote', note);
     },
-    removeTodo({ commit }, index) {
-      commit('removeTodo', index);
+    removeNote({ commit }, index) {
+      commit('removeNote', index);
     },
   },
   getters: {
-    todos: (state) => state.todos,
+    notes: (state) => state.notes,
   },
 });
